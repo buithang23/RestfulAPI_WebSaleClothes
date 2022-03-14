@@ -1,0 +1,25 @@
+components:
+  schemas:
+    Product:
+      type: object
+      required:
+        - NameProduct
+        - TypeProduct
+        - Price
+      properties:
+        _id:
+          type: string
+        NameProduct:
+          type: String
+        TypeProduct:
+          type: string
+        Price:
+          type: integer
+        Description:
+          type: string
+      example:
+        _id: 620512ba0bbb67c4f6157e54
+        NameProduct: Áo ngắn tay
+        TypeProduct: Ao dài
+        Price: 20000
+        Description: Áo đẹp

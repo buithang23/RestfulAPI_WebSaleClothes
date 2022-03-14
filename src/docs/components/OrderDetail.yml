@@ -1,0 +1,29 @@
+components:
+  schemas:
+    OrderDetail:
+      type: object
+      required:
+        - OrderID
+        - ProductID
+        - Color
+        - Size
+      properties:
+        OrderID:
+          type: objectId
+          ref: Cart
+        ProductID:
+          type: objectId
+          ref: Product
+        Color:
+          type: string
+        size:
+          type: integer
+        Amount:
+          type: integer
+          default: 1
+      example:
+        OrderID: 621c40b1786b85249a25c6a9
+        ProductID: 620514950bbb67c4f6157e56
+        Color: Red
+        Size: 37
+        Quality: 3

@@ -1,0 +1,24 @@
+components:
+  schemas:
+    ProductDetail:
+      type: object
+      required:
+        - ProductID
+        - Color
+        - Size
+        - Quality
+      properties:
+        ProductID:
+          type: objectId
+          ref: Product
+        Color:
+          type: string
+        Size:
+          type: integer
+        Quality:
+          type: integer
+      example:
+        ProductID: 6203ab24b66381a1ac9f59fe
+        Color: Red
+        Size: 37
+        Quality: 3

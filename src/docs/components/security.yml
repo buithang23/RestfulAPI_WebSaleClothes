@@ -1,0 +1,7 @@
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      description: Enter your Bearer in the format `<token>`
+      scheme: bearer
+      bearerFormat: JWT

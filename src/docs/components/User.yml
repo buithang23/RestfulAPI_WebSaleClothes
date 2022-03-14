@@ -1,0 +1,39 @@
+components:
+  schemas:
+    User:
+      type: object
+      required:
+        - Name
+        - Email
+        - Password
+      properties:
+        _id:
+          type: string
+        Name:
+          type: string
+        Email:
+          type: string
+          unique: true
+        Password:
+          type: string
+        Telephone:
+          type: integer
+        Age:
+          type: integer
+        Address:
+          type: string
+        isActive:
+          type: boolean
+          default: true
+        Role:
+          type: string
+          enum: ["admin", "guest"]
+          default: "guest"
+      example:
+        Name: "buithang"
+        Email: "buivietthang2393@gmail.com"
+        Password: "123456"
+        Telephone: "0979578023"
+        Age: 23
+        Address: "170 đường số 2"
+        Role: "admin"

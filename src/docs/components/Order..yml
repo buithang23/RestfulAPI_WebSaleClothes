@@ -1,0 +1,25 @@
+components:
+  schemas:
+    Order:
+      type: object
+      required:
+        - Customer
+        - Status
+      properties:
+        Customer:
+          type: string,
+        Status:
+          type: string
+          enum:
+            [
+              "PENDING",
+              "WAITCONFRIM",
+              "WAITINGPICKUP",
+              "SHIPMENT",
+              "COMPLETE",
+              "CANCELLED",
+            ]
+          default: "PENDING"
+      example:
+        Customer: buivietthang2393@gmail.com
+        Status: WAITCONFRIM
