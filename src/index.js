@@ -9,13 +9,14 @@ const orderRoute = require("./routes/OrderRouter");
 const MailService = require("./utils/MailService");
 const CatchError = require("./middlewares/error");
 const swaggerjsdoc = require("./docs/SwaggerConfig");
+const cors = require("cors");
 const swagger = require("swagger-ui-express");
 
 Mongo.connect();
 MailService.init();
 const app = express();
 app.use(express.json());
-
+app.use(cors());
 app.use("/api/v1/product", ProductRoute);
 app.use("/api/v1/auth", AuthRoute);
 app.use("/api/v1/user", UserRoute);

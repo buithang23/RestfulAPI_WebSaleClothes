@@ -14,6 +14,9 @@ const swaggerConfig = {
       {
         url: "http://localhost:3000",
       },
+      {
+        url: "https://websaleclothes.herokuapp.com",
+      },
     ],
   },
   apis: ["./src/docs/swagger/*.js", "./src/docs/components/*.yml"],
