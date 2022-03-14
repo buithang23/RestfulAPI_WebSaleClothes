@@ -6,16 +6,16 @@ const swaggerConfig = {
   definition: {
     openapi: "3.0.0",
     info: {
-      title: "My Nodejs",
+      title: "API Website Sale Clothes",
       version,
-      description: "Customer API Information",
+      description: "Restfull API Website sale clothes",
     },
     servers: [
       {
-        url: "http://localhost:3000",
+        url: "https://websaleclothes.herokuapp.com",
       },
       {
-        url: "https://websaleclothes.herokuapp.com",
+        url: "http://localhost:3000",
       },
     ],
   },
