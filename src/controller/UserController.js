@@ -74,3 +74,18 @@ exports.updatePassword = CatchAsync(async (req, res) => {
     success: true,
   });
 });
+exports.changeRole = CatchAsync(async (req, res) => {
+  const { id } = req.params;
+  const user = await User.findByIdAndUpdate(
+    id,
+    { Role: "admin" },
+    { new: true }
+  );
+  if (!user) {
+    throw new ApiError(400, "Change role faile");
+  }
+  res.json({
+    success: true,
+    data: user,
+  });
+});

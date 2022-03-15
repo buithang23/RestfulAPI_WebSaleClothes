@@ -36,7 +36,7 @@ exports.login = CatchAsync(async (req, res) => {
 
 exports.register = CatchAsync(async (req, res) => {
   const { Name, Email, Password, Age } = req.body;
-  const user = await User.create({ Name, Email, Password, Age });
+  const user = await User.create({ Name, Email, Password });
   res.json({
     success: true,
     data: user,

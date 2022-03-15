@@ -65,14 +65,20 @@
  * /api/v1/auth/register:
  *  put:
  *      summary: Resgister new account
-
  *      tags: [Auth]
  *      requestBody:
  *          require: true
  *          content:
  *              application/json:
  *                  schema:
- *                    $ref: '#/components/schemas/User'
+ *                    type: object
+ *                    properties:
+ *                      Name:
+ *                        type: string
+ *                      Email:
+ *                        type: string
+ *                      Password:
+ *                        type: string
  *      responses:
  *        "200":
  *          description: ok
@@ -92,11 +98,8 @@
  *                      Name: "buithang"
  *                      Email: "buivietthang2393@gmail.com"
  *                      Password: "123456"
- *                      Telephone: "0979578023"
- *                      Age: "23"
- *                      Address: "170 đường số 2"
  *                      isActive: true
- *                      Role: "admin"
+ *                      Role: "guest"
  *        "400":
  *          description: Email is dupplicated
  *          content:

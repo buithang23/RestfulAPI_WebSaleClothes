@@ -130,6 +130,48 @@
 
 /**
  * @swagger
+ * /api/v1/user/{id}:
+ *  patch:
+ *      summary: Change role user
+ *      tags: [User]
+ *      security:
+ *          - bearerAuth: []
+ *      parameters:
+ *        - in : path
+ *          name: id
+ *          schema:
+ *              type: string
+ *          required: true
+ *          description: User id
+ *      description: You must login Admin account and use JWT to delete User
+ *      responses:
+ *        "200":
+ *          description: ok
+ *          content:
+ *              application/json:
+ *                  schema:
+ *                    type: object
+ *                    properties:
+ *                      success:
+ *                        type: string
+ *                      data:
+ *                        type: object
+ *                        $ref: '#/components/schemas/User'
+ *                  example:
+ *                    success: true
+ *                    data:
+ *                      Name: "buithang"
+ *                      Email: "buivietthang2393@gmail.com"
+ *                      Password: "123456"
+ *                      Telephone: "0979578023"
+ *                      Age: "23"
+ *                      Address: "170 đường số 2"
+ *                      isActive: true
+ *                      Role: "admin"
+ */
+
+/**
+ * @swagger
  * /api/v1/user/:
  *  patch:
  *      summary: Users Update Information
@@ -181,6 +223,23 @@
  *                      Address: "170 đường số 2"
  *                      isActive: true
  *                      Role: "admin"
+ *        "400":
+ *          description: Confirm password not incorrest
+ *          content:
+ *            application/json:
+ *                  schema:
+ *                    type: object
+ *                    properties:
+ *                      success:
+ *                        type: boolean
+ *                      statuscode:
+ *                        type: integer
+ *                      message:
+ *                        type: string
+ *                  example:
+ *                    success: false
+ *                    statuscode: 400
+ *                    message: Change role false
  */
 
 /**
